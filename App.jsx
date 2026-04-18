@@ -32,7 +32,7 @@ function App() {
     return `${hrs}:${min}:${secs}`;
   }
 
-  function refresh(){
+  function restart(){
     setSec(0);
     setPlay(false);
 
@@ -41,7 +41,7 @@ function App() {
   return (
     <>
       <div className="main-box">
-        <IoMdRefresh className="refresh" onClick={refresh}/>
+        <IoMdRefresh className="refresh" onClick={restart}/>
         <p id="time">{formatTimer(sec)}</p>
       </div>
       <button className="resume" onClick={playTimer}>
